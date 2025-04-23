@@ -341,6 +341,211 @@ footer .social img:hover {
   color: white;
 }
 
+/* BOLSA DE TRABAJO */
+.bolsa-empleos {
+  padding: 60px 40px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.contenedor-principal-empleos {
+  display: flex; /* Para alinear la imagen izquierda y el contenido derecho */
+  align-items: center; /* Centrar verticalmente los elementos */
+  gap: 20px; /* Espacio entre la imagen y el contenido */
+  max-width: 1200px; /* Ancho máximo para el contenedor */
+  margin: 0 auto; /* Centrar el contenedor horizontalmente */
+}
+
+.imagen-izquierda-empleos {
+  flex: 1; /* La imagen ocupará la mitad del espacio disponible */
+}
+
+.imagen-izquierda-empleos img {
+  display: block;
+  width: 100%; /* La imagen se ajustará al ancho de su contenedor */
+  height: auto;
+  border-radius: 8px; /* O el estilo que desees para los bordes de la imagen */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  object-fit: cover; /* Para que la imagen cubra el contenedor sin distorsionarse */
+}
+
+.contenido-derecha-empleos {
+  flex: 1; /* El contenido ocupará la otra mitad del espacio disponible */
+}
+
+.titulo-empleos {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: left; /* Alinea el título a la izquierda */
+}
+
+.contenedor-empleo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: stretch; /* Estira las tarjetas para que ocupen todo el ancho */
+}
+
+.empleo-card {
+  background-color: #f8f8f8;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 100%; /* Ocupa el 100% del ancho disponible */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.texto-empleo {
+  text-align: left;
+  flex: 1;
+}
+
+.imagen-empleo {
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Ajuste para la segunda tarjeta (imagen a la izquierda) */
+.empleo-card:nth-child(2) {
+  flex-direction: row-reverse; /* Invierte el orden para la segunda tarjeta */
+}
+
+.empleo-card:nth-child(2) .texto-empleo {
+  padding-left: 15px;
+  padding-right: 0;
+}
+
+/*CONTACTO*/
+
+/* Estilos generales para la sección de contacto */
+.contacto {
+  padding: 80px 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contenedor-contacto {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+  gap: 40px;
+  align-items: start;
+}
+
+/* Columna izquierda para redes sociales y texto */
+.columna-izquierda-contacto {
+  display: flex;
+  flex-direction: column; /* Apila las redes sociales y el texto verticalmente */
+  align-items: flex-start; /* Alinea los elementos a la izquierda */
+}
+
+/* Estilos para la información de contacto (redes sociales) */
+.informacion-contacto {
+  text-align: left;
+  margin-bottom: 30px; /* Espacio entre las redes sociales y el texto */
+}
+
+.informacion-contacto h3 {
+  font-size: 1.8em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.redes-sociales-contacto {
+  margin-top: 20px;
+}
+
+.redes-sociales-contacto a {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 2em;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.redes-sociales-contacto a:hover {
+  color: #007bff;
+}
+
+/* Estilos para el texto de contacto */
+.texto-contacto {
+  text-align: left;
+}
+
+.titulo-seccion {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 10px; /* Reducimos el margen inferior */
+}
+
+.subtitulo-seccion {
+  color: #777;
+  margin-bottom: 0; /* Eliminamos el margen inferior */
+  font-style: italic;
+}
+
+/* Estilos para el formulario de contacto */
+.formulario-contacto {
+  text-align: left;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contacto h3 {
+  font-size: 1.8em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.campo-formulario {
+  margin-bottom: 20px;
+}
+
+.campo-formulario label {
+  display: block;
+  margin-bottom: 5px;
+  color: #444;
+  font-weight: bold;
+}
+
+.campo-formulario input[type="text"],
+.campo-formulario input[type="email"],
+.campo-formulario textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.campo-formulario textarea {
+  resize: vertical;
+}
+
+.boton-enviar {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.boton-enviar:hover {
+  background-color: #0056b3;
+}
+
 /* RESPONSIVE */
 @media screen and (max-width: 768px) {
   header {
@@ -389,4 +594,33 @@ footer .social img:hover {
     width: 100%;
     padding: 40px 20px;
   }
+
+  .contenedor-contacto {
+    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+  }
+
+  .columna-izquierda-contacto {
+    align-items: center; /* Centra la columna izquierda en pantallas pequeñas */
+    text-align: center;
+  }
+
+  .informacion-contacto {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .texto-contacto {
+    text-align: center;
+  }
+
+  .formulario-contacto {
+    padding: 20px;
+  }
+
+  .redes-sociales-contacto a {
+    margin: 0 10px;
+    font-size: 1.8em;
+  }
+
+
 }
