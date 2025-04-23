@@ -125,16 +125,20 @@ p {
 }
 
 .image {
-  flex: 1 1 550px;
+  flex: 1 1 550px; /* Mantiene la flexibilidad y el ancho inicial */
   display: flex;
   justify-content: center;
   align-items: center;
+  /* Añade esto si quieres controlar la altura del contenedor también */
+  /* height: 700px;  */
 }
 
 .image img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
+  /* width: 100%;  Mantenemos el ajuste al ancho */
+  max-width: 550px;
+  /* Establece una altura fija */
+  height: 700px; /* Ajusta este valor según lo necesites */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
