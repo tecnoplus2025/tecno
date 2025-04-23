@@ -41,6 +41,17 @@
             <a href="[Enlace a Instagram]" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="[Enlace a X]" target="_blank" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
         </div>
-      </footer>   
+      </footer>
+      
+      <script>
+        window.addEventListener("DOMContentLoaded", () => {
+          const header = document.querySelector("header");
+          const main = document.querySelector(".area-comercial");
+          if (header && main) {
+            main.style.paddingTop = header.offsetHeight + "px";
+          }
+        });
+      </script>
+      
 </body>
   

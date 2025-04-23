@@ -104,5 +104,15 @@
     </div>
   </footer>
 
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const header = document.querySelector("header");
+      const main = document.querySelector(".quienes-somos");
+      if (header && main) {
+        main.style.paddingTop = header.offsetHeight + "px";
+      }
+    });
+  </script>
+
 </body>
 </html>
