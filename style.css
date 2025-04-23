@@ -1,262 +1,298 @@
+/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ffffff;
-    color: #111;
-  }
-  
-  /* Menú fijo */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #111;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.logo {
+  width: 80px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  font-weight: 500;
+}
+
+nav a:hover,
+nav .active {
+  background-color: #e6f0ff;
+  color: #007bff;
+}
+
+/* SECTIONS */
+section {
+  min-height: 100vh;
+  padding: 100px 10vw 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.quienes-somos {
+  background: linear-gradient(to bottom right, #f8fbff, #e8f1ff);
+}
+
+.mision-vision {
+  background-image: url('./edificios.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10vw;
+}
+
+.mision-vision::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.85);
+  z-index: 0;
+}
+
+.mision-vision .content {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  max-width: 800px;
+}
+
+.mision-vision h1 {
+  font-size: 3em;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.mision-vision p {
+  font-size: 1.1em;
+  color: #222;
+  line-height: 1.6;
+}
+
+.content {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+p {
+  text-align: justify;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.image {
+  flex: 1 1 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer {
+  padding: 40px 0;
+  background-color: #fafafa;
+  border-top: 1px solid #eaeaea;
+  margin-top: -1px;
+  text-align: center;
+}
+
+footer .social img {
+  width: 30px;
+  margin: 0 8px;
+  transition: transform 0.3s ease;
+}
+
+footer .social img:hover {
+  transform: scale(1.1);
+}
+
+/* OBJETIVOS */
+.objetivos {
+  background: #f7faff;
+  padding: 100px 10vw;
+  text-align: center;
+}
+
+.objetivos h1 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.objetivos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  align-items: start;
+}
+
+.objetivo {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.objetivo:hover {
+  transform: translateY(-5px);
+}
+
+.objetivo img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.objetivo p {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ESTRATEGIAS */
+.estrategias {
+  background-color: #eef6ff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 100px 10vw;
+}
+
+.estrategias .content {
+  flex: 1 1 500px;
+}
+
+.estrategias ul {
+  padding-left: 20px;
+  line-height: 2;
+  font-size: 1.1em;
+}
+
+.estrategias .image {
+  flex: 1 1 500px;
+  text-align: center;
+}
+
+.estrategias img {
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+/* COMPROMISO */
+.compromiso {
+  background-color: #f0f5f9;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 100px 10vw;
+}
+
+.compromiso .image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.compromiso .image img {
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+.compromiso .content {
+  flex: 1 1 500px;
+  padding-left: 40px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
   header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 40px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    flex-direction: column;
+    padding: 20px;
   }
-  
-  .logo {
-    width: 80px;
-  }
-  
+
   nav {
-    display: flex;
-    gap: 20px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #333;
-    padding: 10px 15px;
-    border-radius: 10px;
-    transition: background 0.3s ease;
-    font-weight: 500;
-  }
-  
-  nav a:hover,
-  nav .active {
-    background-color: #e6f0ff;
-    color: #007bff;
-  }
-  
-  /* Secciones tipo pantalla completa */
-  section {
-    min-height: 100vh;
-    padding: 100px 10vw 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
-  }
-  
-  .quienes-somos {
-    background: linear-gradient(to bottom right, #f8fbff, #e8f1ff);
-  }
-  
-  .mision-vision {
-    background-image: url('./edificios.jpeg'); /* Asegúrate de que esta imagen exista en tu carpeta */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 0 10vw;
-  }
-  
-  .mision-vision::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255,255,255,0.85); /* Fondo blanco con opacidad */
-    z-index: 0;
-  }
-  
-  .mision-vision .content {
-    position: relative;
-    z-index: 1;
-    text-align: left;
-    max-width: 800px;
-  }
-  
-  .mision-vision h1 {
-    font-size: 3em;
-    color: #111;
-    margin-bottom: 20px;
-  }
-  
-  .mision-vision p {
-    font-size: 1.1em;
-    color: #222;
-    line-height: 1.6;
+    gap: 10px;
   }
 
-  .content {
-    flex: 1 1 500px;
-    max-width: 600px;
-  }
-  
-  h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #222;
-  }
-  
-  p {
-    text-align: justify;
-    font-size: 1.1em;
-    line-height: 1.6;
+  section {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 5vw;
   }
 
-  .image {
-    flex: 1 1 550px; /* Mantiene la flexibilidad y el ancho inicial */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Añade esto si quieres controlar la altura del contenedor también */
-    /* height: 700px;  */
+  .content, .image {
+    max-width: 100%;
+    padding: 0;
   }
-  
+
   .image img {
-    /* width: 100%;  Mantenemos el ajuste al ancho */
-    max-width: 550px;
-    /* Establece una altura fija */
-    height: 700px; /* Ajusta este valor según lo necesites */
-    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    height: auto;
+    max-height: 300px;
   }
 
-  /* Footer */
-  footer {
-    padding: 40px 0;
-    background-color: #fafafa;
-    border-top: 1px solid #eaeaea;
-    margin-top: -1px;
-  }
-
-  footer .social img {
-    width: 30px;
-    margin: 0 8px;
-    transition: transform 0.3s ease;
-  }
-
-  footer .social img:hover {
-    transform: scale(1.1);
-  }
-  
-    /* OBJETIVOS */
-  .objetivos {
-    background: #f7faff;
-    padding: 100px 10vw;
+  .estrategias, .compromiso {
+    flex-direction: column;
     text-align: center;
   }
-  
-  .objetivos h1 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-  }
-  
-  .objetivos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    justify-content: center;
-    align-items: start;
-  }
-  
-  .objetivo {
-    background: white;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-    transition: transform 0.3s ease;
-  }
-  
-  .objetivo:hover {
-    transform: translateY(-5px);
-  }
-  
-  .objetivo img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 15px;
-  }
-  
-  .objetivo p {
-    font-size: 1em;
-    color: #333;
-    line-height: 1.5;
-  }
-  
 
-  /* ESTRATEGIAS */
-  .estrategias {
-        background-color: #eef6ff;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        padding: 100px 10vw;
-  }
-  
-  .estrategias .content {
-        flex: 1 1 500px;
-  }
-  
-  .estrategias ul {
-        padding-left: 20px;
-        line-height: 2;
-        font-size: 1.1em;
-  }
-  
-  .estrategias .image {
-        flex: 1 1 500px;
-        text-align: center;
-  }
-  
-  .estrategias img {
-        max-width: 100%;
-        border-radius: 16px;
-  }
-  
-  /* COMPROMISO */
-  .compromiso {
-        background-color: #f0f5f9;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        padding: 100px 10vw;
-  }
-  
-  .compromiso .image {
-        flex: 1 1 400px;
-        text-align: center;
-  }
-  
-  .compromiso .image img {
-        max-width: 100%;
-        border-radius: 16px;
-  }
-  
+  .estrategias .content,
   .compromiso .content {
-        flex: 1 1 500px;
-        padding-left: 40px;
+    padding-left: 0;
   }
-  
+}
