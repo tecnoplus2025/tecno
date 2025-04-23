@@ -27,7 +27,7 @@ header {
 }
 
 .logo {
-  width: 80px;
+  width: 100px;
 }
 
 nav {
@@ -152,14 +152,19 @@ footer {
   text-align: center;
 }
 
-footer .social img {
-  width: 30px;
-  margin: 0 8px;
-  transition: transform 0.3s ease;
+footer .social a {
+  margin-right: 15px;
+  font-size: 2em;
+  color: #555;
+  transition: color 0.3s ease;
 }
 
-footer .social img:hover {
-  transform: scale(1.1);
+footer .social p{
+  display: inline-block;
+}
+
+footer .social a:hover {
+  color: #007bff;
 }
 
 /* OBJETIVOS */
@@ -547,80 +552,93 @@ footer .social img:hover {
 }
 
 /* RESPONSIVE */
-@media screen and (max-width: 768px) {
+@media (max-width: 1024px) {
   header {
-    flex-direction: column;
-    padding: 20px;
+    padding: 15px 20px;
   }
-
   nav {
-    flex-wrap: wrap;
-    justify-content: center;
     gap: 10px;
-  }
-
-  section {
-    flex-direction: column;
-    text-align: center;
-    padding: 80px 5vw;
-  }
-
-  .content, .image {
-    max-width: 100%;
-    padding: 0;
-  }
-
-  .image img {
-    height: auto;
-    max-height: 300px;
-  }
-
-  .estrategias, .compromiso {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .estrategias .content,
-  .compromiso .content {
-    padding-left: 0;
   }
   .area-comercial {
     flex-direction: column;
+    height: auto;
   }
-
-  .area-comercial .descripcion,
-  .area-comercial .accion {
-    flex: 1 1 100%;
+  .lado-izquierdo, .lado-derecho {
+    flex: none;
     width: 100%;
-    padding: 40px 20px;
+    height: 250px;
+    padding: 20px;
   }
-
+  .contenido-texto h2 {
+    font-size: 1.5em;
+  }
+  .contenido-texto li {
+    font-size: 1em;
+  }
+  .empleo-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .empleo-card:nth-child(2) {
+    flex-direction: column;
+  }
+  .imagen-empleo {
+    max-width: 100%;
+  }
   .contenedor-contacto {
-    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    grid-template-columns: 1fr;
   }
+}
 
-  .columna-izquierda-contacto {
-    align-items: center; /* Centra la columna izquierda en pantallas pequeñas */
-    text-align: center;
+@media (max-width: 768px) {
+  .mision-vision h1,
+  .titulo-empleos,
+  .titulo-seccion {
+    font-size: 2em;
   }
-
-  .informacion-contacto {
-    margin-bottom: 30px;
-    text-align: center;
-  }
-
-  .texto-contacto {
-    text-align: center;
-  }
-
   .formulario-contacto {
     padding: 20px;
   }
-
-  .redes-sociales-contacto a {
-    margin: 0 10px;
-    font-size: 1.8em;
+  .objetivos-grid {
+    grid-template-columns: 1fr;
   }
+  .estrategias, .compromiso {
+    flex-direction: column;
+  }
+  .estrategias .image, .compromiso .image, .estrategias .content, .compromiso .content {
+    padding: 0;
+  }
+  .image img {
+    height: auto;
+    max-width: 100%;
+  }
+}
 
-
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav a {
+    padding: 8px 10px;
+    font-size: 0.9em;
+  }
+  .contenido-texto h2,
+  .formulario-contacto h3,
+  .informacion-contacto h3 {
+    font-size: 1.3em;
+  }
+  .contenido-texto li,
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    font-size: 0.95em;
+  }
+  .boton-oferta {
+    padding: 10px 15px;
+    font-size: 0.9em;
+  }
+  .logo {
+    width: 80px;
+  }
 }
