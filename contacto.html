@@ -59,12 +59,23 @@
     </section>
       
       <footer>
-        <p>© 2025 Tecnoplus. Todos los derechos reservados.</p>
         <div class="social">
+          <p>© 2025 Tecnoplus. Todos los derechos reservados.</p>
           <a href="[Enlace a Facebook]" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
           <a href="[Enlace a Instagram]" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           <a href="[Enlace a X]" target="_blank" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
         </div>
-      </footer>   
+      </footer>
+      
+      <script>
+        window.addEventListener("DOMContentLoaded", () => {
+          const header = document.querySelector("header");
+          const contenido = document.querySelector(".contacto");
+          if (header && contenido) {
+            contenido.style.paddingTop = header.offsetHeight + "px";
+          }
+        });
+      </script>
+      
 </body>
   
